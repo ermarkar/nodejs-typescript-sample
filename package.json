@@ -1,0 +1,24 @@
+{
+  "name": "typescript-node-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "nodemon server.js startServer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "giuseppe": "^1.2.0",
+    "make-runnable": "^1.1.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
+  }
+}
