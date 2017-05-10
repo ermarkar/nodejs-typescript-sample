@@ -19,6 +19,8 @@
     "giuseppe": "^1.2.0",
     "make-runnable": "^1.1.1",
     "request": "^2.81.0",
-    "request-promise": "^4.2.0"
+    "request-promise": "^4.2.0",
+	  "@types/chai": "^3.5.2",
+	  "nodemon": "^1.11.0"
   }
 }
