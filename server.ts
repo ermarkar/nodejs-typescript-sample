@@ -20,7 +20,7 @@ export class Server {
             });
 
         app.listen(port, () => {
-            console.log('Up and running on port ' + port);
+            console.log('Server up and running on port ' + port);
         });
     }
 }
