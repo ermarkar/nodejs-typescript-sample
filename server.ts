@@ -18,8 +18,8 @@ export class Server {
                 /* error happened during loading and registering */
             });
 
-        app.listen(7000, () => {
-            console.log('Up and running on port 7000');
+        app.listen(8080, () => {
+            console.log('Up and running on port 8080');
         });
     }
 }
