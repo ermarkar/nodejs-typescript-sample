@@ -7,7 +7,7 @@ export class Server {
 
     static startServer() {
         let app = express();
-        let port = process.env.port || 8080;
+        let port = process.env.PORT || 8080;
         app.use(bodyParser.json());
 
         registerControllersFromFolder({ folderPath: './app/services' })
