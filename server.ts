@@ -7,6 +7,7 @@ export class Server {
 
     static startServer() {
         let app = express();
+        let port = process.env.port || 8080;
         app.use(bodyParser.json());
 
         registerControllersFromFolder({ folderPath: './app/services' })
@@ -18,8 +19,8 @@ export class Server {
                 /* error happened during loading and registering */
             });
 
-        app.listen(8080, () => {
-            console.log('Up and running on port 8080');
+        app.listen(port, () => {
+            console.log('Up and running on port ' + port);
         });
     }
 }
