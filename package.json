@@ -1,26 +1,45 @@
 {
-  "name": "typescript-node-api",
+  "name": "helpcoin",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "HelpCoin APIs",
+  "main": "./dist/server.js",
   "scripts": {
-    "prestart": "tsc",
-    "start": "node server.js startServer",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "del-cli ./dist/*",
+    "prestart": "yarn clean && tsc && yarn copyfiles",
+    "copyfiles": "copyfiles .env dist",
+    "start": "yarn serve",
+    "serve": "node dist/server.js",
+    "start-dev": "yarn prestart && concurrently \"tsc --watch \" \"nodemon dist/server.js\""
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Sunil Garg",
   "license": "ISC",
-  "devDependencies": {
-    "typescript": "^2.3.2"
+  "bugs": {
+    "url": ""
   },
+  "homepage": "",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "giuseppe": "^1.2.0",
-    "make-runnable": "^1.1.1",
-    "request": "^2.81.0",
-    "request-promise": "^4.2.0",
-    "@types/chai": "^3.5.2"
-	  
+    "body-parser": "^1.15.0",
+    "connect-timeout": "^1.9.0",
+    "cookie-parser": "^1.4.5",
+    "copyfiles": "^2.2.0",
+    "cors": "^2.8.5",
+    "del-cli": "^3.0.0",
+    "express": "^4.13.4",
+    "giuseppe": "^3.1.0",
+    "giuseppe-reqres-plugin": "^2.0.0",
+    "http": "0.0.0",
+    "node-env-file": "^0.1.8",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^1.11.0",
+    "tslint": "^6.1.0"
   }
 }

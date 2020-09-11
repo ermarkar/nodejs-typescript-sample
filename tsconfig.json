@@ -1,16 +1,22 @@
-// TypeScript compiler configuration file : guides the compiler to generate js files
 {
     "compilerOptions": {
-        "target": "es6", //targeting ES2015 
-        "module": "commonjs", //CommonJS style module as output (the same module style that Node uses)
+        "baseUrl": "./",
+        "target": "es2015",
+        "module": "commonjs",
         "moduleResolution": "node",
         "removeComments": true,
         "sourceMap": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "pretty": true
+        "pretty": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "dist",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
     },
-    "exclude": [
-        "node_modules"
+    "include": [
+        "src/**/*"
     ]
 }
